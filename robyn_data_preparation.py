@@ -171,7 +171,7 @@ class DataHandler:
 
     def rename_campaign_type(self, df):
 
-        if "facebook_campaign_type_dict" and "split_campaigns_by" in self.config:
+        if "split_campaigns_by" in self.config:
             df.campaign = df.campaign.apply(
                 lambda x: self.split_campaign(
                     x, split_by=self.config["split_campaigns_by"]
